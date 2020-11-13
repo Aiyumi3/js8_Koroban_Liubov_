@@ -19,7 +19,7 @@ class Marker {
 .click(function() {
     let counter = $(this).data('counter');    
     $(this).data('counter', counter + 1);        
-    return document.getElementById('b').innerHTML = $(this).data('counter');            
+    alert($(this).data('counter'));             
 });
        
        let patt1 = /\S/g;
