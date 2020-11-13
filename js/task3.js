@@ -16,6 +16,7 @@ class Marker {
        //let num = 0;
        //num += 1; 
        let patt1 = /\S/g;
+       let str = document.getElementById('p').value;
        let result = str.match(patt1).length;
      
         amOfInk -= result;
