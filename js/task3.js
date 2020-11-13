@@ -18,13 +18,8 @@ class Marker {
 
        while ( n <= i) {
           return document.getElementById('p').style.color = 'red';
-          $('#b').click(function(){
-	          $('#b').prop('disabled', true);
-         });
-         $('#p').click(function(){
-	          $('#p').prop('disabled', true);
-         });
-             
+          return document.getElementById("b").disabled = true;
+             return document.getElementById('p').disabled = true;
           i++;
        }
     }
