@@ -9,7 +9,7 @@ class Marker {
         let arr = document.getElementById('p').split(' ');
         
      
-    handleEvent(event) {
+    
         
         amOfInk -= arr.length;
        return document.getElementById('p2').innerHTML = amOfInk;
@@ -17,7 +17,7 @@ class Marker {
       if(amOfInk < 1){
              return document.getElementById('p').style.color = 'black';
          }
-    }
+    
   
         //do {
          //return document.getElementById('p').style.color = 'black';
