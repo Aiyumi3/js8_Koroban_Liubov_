@@ -15,9 +15,13 @@ class Marker {
         }
        while (this.numOfInk < 1);
     }
+    reset(){
+        return document.getElementById('p').style.display = 'none';
+    }
 }
 let marker1 = new Marker();
 document.getElementById('b').addEventListener('click', function(){marker1.print()});
+document.getElementById("p").onclick = function(){marker1.reset()};
 
 class filledMarker extends Marker{
     amountoOfInk = 0;
