@@ -6,18 +6,16 @@ class Marker {
     }
     print() {
         return document.getElementById('p').style.color = this.color;
-        let arr = document.getElementById('p').split(' ');
-        
-     
-    
-        
+        //let arr = document.getElementById('p').split(' ');
+ 
+        /*
         amOfInk -= arr.length;
        return document.getElementById('p2').innerHTML = amOfInk;
         
       if(amOfInk < 1){
              return document.getElementById('p').style.color = 'black';
          }
-    
+    */
   
         //do {
          //return document.getElementById('p').style.color = 'black';
