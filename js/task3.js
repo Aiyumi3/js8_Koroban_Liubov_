@@ -16,9 +16,7 @@ class Marker {
        return document.getElementById('p2').innerHTML = ' amount of ink =  ' + n ;
        
        if( n <= 0) {
-          return document.getElementById('p').onclick =  function(){ };
-          return document.getElementById('b').display = 'none';
-           
+          return document.getElementById('b').onclick =  function(){ document.getElementById('b').display = 'none'};
        }
     }
     reset(){
