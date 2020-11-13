@@ -6,7 +6,7 @@ class Marker {
     print() {
         return document.getElementById('p').style.color = this.color;
         let arr = document.getElementById('p').split(' ');
-     if(onclick){
+     if(document.getElementById('b').onclick == true){
         this.numOfInk -= arr.length;
         document.getElementById('p2').innerHTML = this.numOfInk;
       
@@ -22,10 +22,15 @@ class Marker {
     reset(){
         return document.getElementById('p').style.color = 'white';
     }
+    onclick(val){
+        document.getElementById('b').addEventListener('click', function(){val.print()});
+        document.getElementById("p").onclick = function(){val.reset()};
+    }
 }
 let marker1 = new Marker();
-document.getElementById('b').addEventListener('click', function(){marker1.print()});
-document.getElementById("p").onclick = function(){marker1.reset()};
+marker1.onclick(marker1);
+//document.getElementById('b').addEventListener('click', function(){marker1.print()});
+//document.getElementById("p").onclick = function(){marker1.reset()};
 
 class filledMarker extends Marker{
     amountoOfInk = 0;
