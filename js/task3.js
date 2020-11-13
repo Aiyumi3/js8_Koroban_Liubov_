@@ -13,14 +13,13 @@ class Marker {
         //}
        //while 
    amountOnclick(){
-       //let num = 0;
-       //num += 1; 
-       $('input')
-.data('counter', 0)                            // Обнуляем счетчик
+       
+       $('#b')
+.data('counter', 0)                            
 .click(function() {
-    let counter = $(this).data('counter');    // Получаем значение
-    $(this).data('counter', counter + 1);        // Увеличиваем значение на 1
-    alert($(this).data('counter'));            // Выводим количество кликов
+    let counter = $(this).data('counter');    
+    $(this).data('counter', counter + 1);        
+    return document.getElementById('b').innerHTML = $(this).data('counter');            
 });
        
        let patt1 = /\S/g;
@@ -28,17 +27,25 @@ class Marker {
        let result = str.match(patt1).length;
      
          this.numOfInk -= result;
-       return document.getElementById('p2').innerHTML =  this.numOfInk + ', res =  ' + result;
+        let n = (this.numOfInk).toFixed(1);
+       return document.getElementById('p2').innerHTML = ' amount of ink =  ' + n + ', simbols =  ' + result;
         
-      if( this.numOfInk <= 0){
-             return document.getElementById('p').style.color = 'white';
+      if( n <= 0){
+          return document.getElementById('p').style.color = 'black';
+          $('#b').click(function(){
+	          $('#b').prop('disabled', true);
+         });
+         $('#p').click(function(){
+	          $('#p').prop('disabled', true);
+         });
+             
          }
    }
     reset(){
         return document.getElementById('p').style.color = 'white';
     }
     onclick(val){
-        document.querySelector("button").addEventListener('click', function(){
+        document.getElementById("b").addEventListener('click', function(){
             val.print();
             val.amountOnclick();
         });
