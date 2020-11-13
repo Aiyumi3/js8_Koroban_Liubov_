@@ -1,8 +1,8 @@
 class Marker {
-    amOfInk = 55.7;
+    //amOfInk = 55.7;
     constructor() {
         this.color = '#' + Math.random().toString(16).slice(2, 8);
-      //  this.numOfInk = 55.7;
+        this.numOfInk = 55.7;
     }
     print() {
         return document.getElementById('p').style.color = this.color;
@@ -13,16 +13,24 @@ class Marker {
         //}
        //while 
    amountOnclick(){
-       let num = 0;
-       num += 1; 
+       //let num = 0;
+       //num += 1; 
+       $('input')
+.data('counter', 0)                            // Обнуляем счетчик
+.click(function() {
+    let counter = $(this).data('counter');    // Получаем значение
+    $(this).data('counter', counter + 1);        // Увеличиваем значение на 1
+    alert($(this).data('counter'));            // Выводим количество кликов
+});
+       
        let patt1 = /\S/g;
        let str = document.getElementById('p').textContent;
        let result = str.match(patt1).length;
      
-        amOfInk -= result;
-       return document.getElementById('p2').innerHTML = amOfInk + ', res =  ' + result + ', click =' + num;
+         this.numOfInk -= result;
+       return document.getElementById('p2').innerHTML =  this.numOfInk + ', res =  ' + result;
         
-      if(amOfInk <= 0){
+      if( this.numOfInk <= 0){
              return document.getElementById('p').style.color = 'white';
          }
    }
