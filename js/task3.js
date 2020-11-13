@@ -14,24 +14,22 @@ class Marker {
        this.numOfInk -= result;
        let n = (this.numOfInk).toFixed(1);
        return document.getElementById('p2').innerHTML = ' amount of ink =  ' + n ;
-        let i = 0;
-
-       while ( n <= i) {
-          return document.getElementById('p').style.color = 'red';
-          return document.getElementById("b").disabled = true;
-             return document.getElementById('p').disabled = true;
-          i++;
+       
+       if( n <= 0) {
+          return document.getElementById('p').onclick =  function(){ };
+          return document.getElementById('b').display = 'none';
+           
        }
     }
     reset(){
         return document.getElementById('p').style.color = 'white';
     }
     onclick(val){
-        document.getElementById("b").addEventListener('click', function(){
+        document.getElementById('b').addEventListener('click', function(){
             val.print();
             val.amountOnclick();
         });
-        document.getElementById("p").onclick = function(){val.reset()};
+        document.getElementById('p').onclick = function(){val.reset()};
     }
 }
 let marker1 = new Marker();
