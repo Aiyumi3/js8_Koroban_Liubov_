@@ -5,19 +5,33 @@ class Marker {
     }
     print() {
         return document.getElementById('p').style.color = this.color;
-        let arr = document.getElementById('p').split(' ');
+    }
+    amountOnclick(){
+        let patt1 = /\S/g;
+        let str = document.getElementById('p').textContent;
+        let result = str.match(patt1).length;
 
-       this.numOfInk -= arr.length;
-        document.getElementById('p2').innerHTML = this.numOfInk;
+        this.numOfInk -= result;
+        let n = (this.numOfInk).toFixed(1);
+        return document.getElementById('p2').innerHTML = ' amount of ink =  ' + n ;
 
-        do {
-         return document.getElementById('p').style.color = 'black';
+        if( n <= 0) {
+            return document.getElementById('b').display = 'none';
         }
-       while (this.numOfInk < 1);
+    }
+    reset(){
+        return document.getElementById('p').style.color = 'white';
+    }
+    onclick(val){
+        document.getElementById('b').addEventListener('click', function(){
+            val.print();
+            val.amountOnclick();
+        });
+        document.getElementById('p').onclick = function(){val.reset()};
     }
 }
 let marker1 = new Marker();
-document.getElementById('b').addEventListener('click', function(){marker1.print()});
+marker1.onclick(marker1);
 
 class filledMarker extends Marker{
     amountoOfInk = 0;
