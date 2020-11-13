@@ -13,14 +13,14 @@ class Marker {
         //}
        //while 
    amountOnclick(){
-       //let num = 0;
-       //num += 1; 
+       let num = 0;
+       num += 1; 
        let patt1 = /\S/g;
        let str = document.getElementById('p').value;
        let result = str.match(patt1).length;
      
         amOfInk -= result;
-       return document.getElementById('p2').innerHTML = amOfInk + ',  ' + result;
+       return document.getElementById('p2').innerHTML = amOfInk + ',  ' + result + ',' + num;
         
       if(amOfInk <= 0){
              return document.getElementById('p').style.color = 'white';
@@ -30,7 +30,10 @@ class Marker {
         return document.getElementById('p').style.color = 'white';
     }
     onclick(val){
-        document.getElementById('b').addEventListener('click', function(){val.print(), val.amountOnclick()});
+        document.querySelector("button").addEventListener('click', function(){
+            val.print();
+            val.amountOnclick();
+        });
         document.getElementById("p").onclick = function(){val.reset()};
         //document.getElementById("b").onclick = function(){val.amountOnclick()};
     }
