@@ -6,26 +6,31 @@ class Marker {
     }
     print() {
         return document.getElementById('p').style.color = this.color;
-        let arr = document.getElementById('p').split(' ');
- 
-        amOfInk -= arr.length;
-       return document.getElementById('p2').innerHTML = amOfInk;
         
-      if(amOfInk < 1){
-             return document.getElementById('p').style.color = 'black';
-         }
-  
+   }
         //do {
          //return document.getElementById('p').style.color = 'black';
         //}
        //while 
-    }
+   amountOnclick(){
+       let num = 0;
+       num += 1;
+       let arr = document.getElementById('p').split(' ');
+ 
+        amOfInk -= arr.length;
+       return document.getElementById('p2').innerHTML = amOfInk + ', click = ' + num;
+        
+      if(amOfInk <= 0){
+             return document.getElementById('p').style.color = 'black';
+         }
+   }
     reset(){
         return document.getElementById('p').style.color = 'white';
     }
     onclick(val){
         document.getElementById('b').addEventListener('click', function(){val.print()});
         document.getElementById("p").onclick = function(){val.reset()};
+        document.getElementById("b").onclick = function(){val.amountOnclick()};
     }
 }
 let marker1 = new Marker();
