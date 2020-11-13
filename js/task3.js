@@ -13,24 +13,25 @@ class Marker {
         //}
        //while 
    amountOnclick(){
-       let num = 0;
-       num += 1;
-       let arr = document.getElementById('p').split(' ');
- 
-        amOfInk -= arr.length;
-       return document.getElementById('p2').innerHTML = amOfInk + ', click = ' + num;
+       //let num = 0;
+       //num += 1; 
+       let patt1 = /\S/g;
+       let result = str.match(patt1).length;
+     
+        amOfInk -= result;
+       return document.getElementById('p2').innerHTML = amOfInk + ',  ' + result;
         
       if(amOfInk <= 0){
-             return document.getElementById('p').style.color = 'black';
+             return document.getElementById('p').style.color = 'white';
          }
    }
     reset(){
         return document.getElementById('p').style.color = 'white';
     }
     onclick(val){
-        document.getElementById('b').addEventListener('click', function(){val.print()});
+        document.getElementById('b').addEventListener('click', function(){val.print(), val.amountOnclick()});
         document.getElementById("p").onclick = function(){val.reset()};
-        document.getElementById("b").onclick = function(){val.amountOnclick()};
+        //document.getElementById("b").onclick = function(){val.amountOnclick()};
     }
 }
 let marker1 = new Marker();
