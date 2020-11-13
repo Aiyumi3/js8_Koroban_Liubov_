@@ -6,6 +6,13 @@ class Marker {
     print() {
         return document.getElementById('p').style.color = this.color;
         let arr = document.getElementById('p').split(' ');
+        
+        
+       
+          let cnt = document.getElementById('p2');
+          cnt.innerText = parseInt(cnt.innerText, 10)+1;
+     
+        
      if(document.getElementById('b').onclick == true){
         this.numOfInk -= arr.length;
         document.getElementById('p2').innerHTML = this.numOfInk;
