@@ -16,11 +16,11 @@ class Marker {
        let num = 0;
        num += 1; 
        let patt1 = /\S/g;
-       let str = document.getElementById('p').value;
+       let str = document.getElementById('p').textContent;
        let result = str.match(patt1).length;
      
         amOfInk -= result;
-       return document.getElementById('p2').innerHTML = amOfInk + ',  ' + result + ',' + num;
+       return document.getElementById('p2').innerHTML = amOfInk + ', res =  ' + result + ', click =' + num;
         
       if(amOfInk <= 0){
              return document.getElementById('p').style.color = 'white';
