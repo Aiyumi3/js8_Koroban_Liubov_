@@ -6,17 +6,21 @@ class Marker {
     print() {
         return document.getElementById('p').style.color = this.color;
         let arr = document.getElementById('p').split(' ');
-
-       this.numOfInk -= arr.length;
+     if(onclick){
+        this.numOfInk -= arr.length;
         document.getElementById('p2').innerHTML = this.numOfInk;
-
-        do {
-         return document.getElementById('p').style.color = 'black';
-        }
-       while (this.numOfInk < 1);
+      
+        //do {
+         //return document.getElementById('p').style.color = 'black';
+        //}
+       //while 
+         if(this.numOfInk < 1){
+             return document.getElementById('p').style.color = 'black';
+         }
+     }
     }
     reset(){
-        return document.getElementById('p').style.display = 'none';
+        return document.getElementById('p').style.color = 'white';
     }
 }
 let marker1 = new Marker();
