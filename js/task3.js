@@ -1,30 +1,28 @@
 class Marker {
+    amOfInk = 55.7;
     constructor() {
         this.color = '#' + Math.random().toString(16).slice(2, 8);
-        this.numOfInk = 55.7;
+      //  this.numOfInk = 55.7;
     }
     print() {
         return document.getElementById('p').style.color = this.color;
         let arr = document.getElementById('p').split(' ');
         
-        
-       
-          let cnt = document.getElementById('p2');
-          cnt.innerText = parseInt(cnt.innerText, 10)+1;
      
+    handleEvent(event) {
         
-     if(document.getElementById('b').onclick == true){
-        this.numOfInk -= arr.length;
-        document.getElementById('p2').innerHTML = this.numOfInk;
-      
+        amOfInk -= arr.length;
+       return document.getElementById('p2').innerHTML = amOfInk;
+        
+      if(amOfInk < 1){
+             return document.getElementById('p').style.color = 'black';
+         }
+    }
+  
         //do {
          //return document.getElementById('p').style.color = 'black';
         //}
        //while 
-         if(this.numOfInk < 1){
-             return document.getElementById('p').style.color = 'black';
-         }
-     }
     }
     reset(){
         return document.getElementById('p').style.color = 'white';
