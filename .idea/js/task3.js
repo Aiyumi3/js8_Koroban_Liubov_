@@ -13,15 +13,20 @@ class Marker {
 
         this.numOfInk -= result;
         let n = (this.numOfInk).toFixed(1);
-        return document.getElementById('p2').innerHTML = ' amount of ink =  ' + n ;
+        return document.getElementById('p2').innerHTML = ' amount of ink =  ' +  n;
+        
+        if( Math.sign(n) == -1 ) {
+         //   return document.getElementById('p2').style.display = 'none';
+            //button.style.display = 'none';
+            return document.getElementById('p3').innerHTML = ' !!! ' + n ;
+            //return document.querySelector('button').disabled = true;
+        //   return document.getElementById('b').setAttribute("disabled", true);       //.style.display = 'none';
+          //document.getElementById('b').onclick.disabled = true;
+           //$('#b').click(function(){
+             // $('#b').prop('disabled', true);
+              //  $('#p2').prop('disabled', true);
+           //});
 
-        if(n < 0) {
-           // return document.getElementById('b').style.display = 'none';
-           // return document.getElementById('b').style.disabled = true;
-            $('#b').click(function(){
-                $('#p').prop('disabled', true);
-                $('#p2').prop('disabled', true);
-            });
         }
     }
 
