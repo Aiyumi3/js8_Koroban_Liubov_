@@ -20,7 +20,7 @@ class Marker {
        }
     }
     reset(){
-        return document.getElementById('p').style.color = 'white';
+        return document.getElementById('p').style.color = 'white'; 
     }
     onclick(val){
         document.getElementById('b').addEventListener('click', function(){
