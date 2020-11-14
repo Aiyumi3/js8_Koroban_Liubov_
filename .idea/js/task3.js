@@ -15,10 +15,16 @@ class Marker {
         let n = (this.numOfInk).toFixed(1);
         return document.getElementById('p2').innerHTML = ' amount of ink =  ' + n ;
 
-        if( n <= 0) {
-            document.getElementById('b').display = 'none';
+        if(n < 0) {
+           // return document.getElementById('b').style.display = 'none';
+           // return document.getElementById('b').style.disabled = true;
+            $('#b').click(function(){
+                $('#p').prop('disabled', true);
+                $('#p2').prop('disabled', true);
+            });
         }
     }
+
     reset(){
         return document.getElementById('p').style.color = 'white';
     }
