@@ -5,26 +5,31 @@ class Marker {
     }
     print() {
         return document.getElementById('p').style.color = this.color;
+        
     }
     amountOnclick(){
         let patt1 = /\S/g;
         let str = document.getElementById('p').textContent;
         let result = str.match(patt1).length;
-
+        let p = document.createElement('p');
+        p.innerHTML = str;
+        p.style.color = this.color;
+        return document.getElementById('p2').appendChild(p);
         this.numOfInk -= result;
         let n = (this.numOfInk).toFixed(1);
-        return document.getElementById('p2').innerHTML = ' amount of ink =  ' +  n;
-        
-        if( Math.sign(n) == -1 ) {
-         //   return document.getElementById('p2').style.display = 'none';
+        return document.getElementById('p').innerHTML = ' amount of ink =  ' +  n;
+
+        if( !(n >= 0) ) {
+            alert('no inks');
+            return document.getElementById('p2').style.display = 'none';
             //button.style.display = 'none';
-            return document.getElementById('p3').innerHTML = ' !!! ' + n ;
-            //return document.querySelector('button').disabled = true;
-        //   return document.getElementById('b').setAttribute("disabled", true);       //.style.display = 'none';
+            return document.getElementById('p').innerHTML = ' !!! ' + n ;
+            return document.querySelector('p').disabled = true;
+            return document.getElementById('b').setAttribute("disabled", true);       //.style.display = 'none';
           //document.getElementById('b').onclick.disabled = true;
-           //$('#b').click(function(){
-             // $('#b').prop('disabled', true);
-              //  $('#p2').prop('disabled', true);
+          // $('#b').click(function(){
+            //  $('#b').prop('disabled', true);
+              //  $('#p').prop('disabled', true);
            //});
 
         }
