@@ -46,7 +46,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605365075656</updated>
-      <workItem from="1605365084447" duration="17504000" />
+      <workItem from="1605365084447" duration="22321000" />
     </task>
     <task id="LOCAL-00001" summary="js">
       <created>1605373930320</created>
@@ -55,7 +55,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605373930321</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="js">
+      <created>1605394291549</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605394291570</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -66,10 +73,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="js" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="256" y="0" key="CommitChangelistDialog2" timestamp="1605373922521">
+    <state x="256" y="0" key="CommitChangelistDialog2" timestamp="1605394285725">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="256" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1605373922521" />
+    <state x="256" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1605394285725" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1605385366865">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
