@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5366a559-4f5c-488e-aa25-7ad2c4ffcb55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/js/task1.js" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/js/task1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/js/task3.js" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/js/task3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="5366a559-4f5c-488e-aa25-7ad2c4ffcb55" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +44,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605365075656</updated>
       <workItem from="1605365084447" duration="26027000" />
-      <workItem from="1605446690145" duration="4611000" />
+      <workItem from="1605446690145" duration="5365000" />
     </task>
     <task id="LOCAL-00001" summary="js">
       <created>1605373930320</created>
@@ -79,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605399958157</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="js">
+      <created>1605483611315</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605483611316</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,10 +92,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="js" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="256" y="0" key="CommitChangelistDialog2" timestamp="1605399953670">
+    <state x="256" y="0" key="CommitChangelistDialog2" timestamp="1605483591277">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="256" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1605399953670" />
+    <state x="256" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1605483591277" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1605385366865">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
