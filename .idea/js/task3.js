@@ -17,14 +17,14 @@ class Marker {
         return document.getElementById('p2').appendChild(p);
         this.numOfInk -= result;
         let n = (this.numOfInk).toFixed(1);
-        return document.getElementById('p').innerHTML = ' amount of ink =  ' +  n;
+        //return document.getElementById('p').innerHTML = ' amount of ink =  ' +  n;
 
         if( !(n >= 0) ) {
-            alert('no inks');
+            alert('don\'t enough inks');
             return document.getElementById('p2').style.display = 'none';
             //button.style.display = 'none';
-            return document.getElementById('p').innerHTML = ' !!! ' + n ;
-            return document.querySelector('p').disabled = true;
+           // return document.getElementById('p').innerHTML = ' !!! ' + n ;
+           // return document.querySelector('p').disabled = true;
             return document.getElementById('b').setAttribute("disabled", true);       //.style.display = 'none';
           //document.getElementById('b').onclick.disabled = true;
           // $('#b').click(function(){
